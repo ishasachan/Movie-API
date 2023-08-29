@@ -1,0 +1,63 @@
+# Get all movies
+GET http://localhost:3000/api/movies
+
+### Get a single movie by ID (replace {movieId} with an actual ID)
+GET http://localhost:3000/api/movies/64faf0dfe12a4d2034607552
+
+### Create a new movie
+POST http://localhost:3000/api/movies
+Content-Type: application/json
+
+{
+  "name": "John Wick 2",
+  "director": "Director Name",
+  "actors": ["Actor 1", "Actor 2"],
+  "imbdrating": "8.0",
+  "image": "https://lionsgate.brightspotcdn.com/1d/90/8fc75de5411e985f3a2def98358d/johnwick4-section-promo-double-home-03.jpg",
+  "genres": ["64faf0dfe12a4d2034607552"]
+}
+
+# Update a movie by ID (replace {movieId} with an actual ID)
+PUT http://localhost:3000/api/movies/64faf0dfe12a4d2034607552
+Content-Type: application/json
+
+{
+  "name": "John Wick",
+  "director": "Director Name",
+  "actors": ["Keanu Reeves", "Actor 2"],
+  "imbdrating": "8.0",
+  "image": "https://lionsgate.brightspotcdn.com/1d/90/8fc75de5411e985f3a2def98358d/johnwick4-section-promo-double-home-03.jpg",
+  "genres": ["64faf0dfe12a4d2034607552"]
+}
+
+# Delete a movie by ID (replace {movieId} with an actual ID)
+DELETE http://localhost:3000/api/movies/64faf0dfe12a4d2034607552
+
+
+### Get all genres
+GET http://localhost:3000/api/genres
+
+
+### Get all movies in a genre by genre ID (replace {genreId} with an actual genre ID)
+GET http://localhost:3000/api/genres/64faf7bf32b624f30a4f4b6d/movies
+
+
+### Create a new genre
+POST http://localhost:3000/api/genres
+Content-Type: application/json
+{
+  "name": "Drama"
+}
+
+
+
+# Update a genre by ID (replace {genreId} with an actual genre ID)
+PUT http://localhost:3000/api/genres/64faf0dfe12a4d2034607552
+Content-Type: application/json
+
+{
+  "name": "Updated Genre Name"
+}
+
+# Delete a genre by ID (replace {genreId} with an actual genre ID)
+DELETE http://localhost:3000/api/genres/64faf0dfe12a4d2034607552
